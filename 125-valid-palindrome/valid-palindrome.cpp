@@ -1,9 +1,9 @@
 class Solution {
 public:
-    bool isAlphaNum(char ch) {
-        return (ch >= '0' && ch <= '9') ||
-               (tolower(ch) >= 'a' && tolower(ch) <= 'z');
-    }
+    // bool isAlphaNum(char ch) {
+    //     return (ch >= '0' && ch <= '9') ||
+    //            (tolower(ch) >= 'a' && tolower(ch) <= 'z');
+    // }
 
     bool isPalindrome(string s) {
         int st = 0;
@@ -11,12 +11,12 @@ public:
 
         while (st < end) {
 
-            if (!isAlphaNum(s[st])) {
+            if (!isalnum(s[st])) {
                 st++;
                 continue;
             }
 
-            if (!isAlphaNum(s[end])) {
+            if (!isalnum(s[end])) {
                 end--;
                 continue;
             }
